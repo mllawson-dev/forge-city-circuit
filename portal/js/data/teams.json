@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ironside",
+    "abbr": "IRN",
+    "name": "Ironside Forgers",
+    "neighborhood": "Ironside",
+    "venue": "Ironside Athletic Park"
+  },
+  {
+    "id": "millbrook",
+    "abbr": "MIL",
+    "name": "Millbrook Anvils",
+    "neighborhood": "Millbrook",
+    "venue": "Millbrook Fieldhouse"
+  },
+  {
+    "id": "rivertown",
+    "abbr": "RVR",
+    "name": "Rivertown Rollers",
+    "neighborhood": "Rivertown",
+    "venue": "Rivertown Common Fields"
+  },
+  {
+    "id": "foundry",
+    "abbr": "FND",
+    "name": "Foundry District Sparks",
+    "neighborhood": "Foundry District",
+    "venue": "Foundry Yards Complex"
+  },
+  {
+    "id": "stockyard",
+    "abbr": "STK",
+    "name": "Stockyard Drovers",
+    "neighborhood": "Stockyard",
+    "venue": "Stockyard Pavilion"
+  },
+  {
+    "id": "northgate",
+    "abbr": "NGT",
+    "name": "Northgate Rivets",
+    "neighborhood": "Northgate",
+    "venue": "Northgate Civic Courts"
+  },
+  {
+    "id": "harborrow",
+    "abbr": "HBR",
+    "name": "Harbor Row Haulers",
+    "neighborhood": "Harbor Row",
+    "venue": "Harbor Row Grounds"
+  },
+  {
+    "id": "canalst",
+    "abbr": "CNL",
+    "name": "Canal Street Smiths",
+    "neighborhood": "Canal Street",
+    "venue": "Canal Street Yard"
+  }
+]

@@ -1,0 +1,1562 @@
+{
+  "baseball": {
+    "games": [
+      {
+        "id": "baseball-r1-0",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "canalst",
+        "date": "2026-07-21",
+        "time": "9:00 AM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 2,
+        "awayScore": 9
+      },
+      {
+        "id": "baseball-r1-1",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "harborrow",
+        "date": "2026-07-22",
+        "time": "7:30 PM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 3,
+        "awayScore": 7
+      },
+      {
+        "id": "baseball-r1-2",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "northgate",
+        "date": "2026-07-21",
+        "time": "6:00 PM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 9,
+        "awayScore": 8
+      },
+      {
+        "id": "baseball-r1-3",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "stockyard",
+        "date": "2026-07-22",
+        "time": "1:00 PM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 6,
+        "awayScore": 8
+      },
+      {
+        "id": "baseball-r2-4",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "ironside",
+        "date": "2026-07-28",
+        "time": "7:30 PM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 3,
+        "awayScore": 6
+      },
+      {
+        "id": "baseball-r2-5",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "rivertown",
+        "date": "2026-07-29",
+        "time": "3:30 PM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 3,
+        "awayScore": 4
+      },
+      {
+        "id": "baseball-r2-6",
+        "round": "regular",
+        "homeTeamId": "harborrow",
+        "awayTeamId": "foundry",
+        "date": "2026-07-28",
+        "time": "1:00 PM",
+        "venue": "Harbor Row Grounds",
+        "status": "final",
+        "homeScore": 0,
+        "awayScore": 6
+      },
+      {
+        "id": "baseball-r2-7",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "stockyard",
+        "date": "2026-07-29",
+        "time": "9:00 AM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 7,
+        "awayScore": 0
+      },
+      {
+        "id": "baseball-r3-8",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "rivertown",
+        "date": "2026-08-04",
+        "time": "11:30 AM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 0,
+        "awayScore": 3
+      },
+      {
+        "id": "baseball-r3-9",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "millbrook",
+        "date": "2026-08-05",
+        "time": "1:00 PM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 3,
+        "awayScore": 9
+      },
+      {
+        "id": "baseball-r3-10",
+        "round": "regular",
+        "homeTeamId": "stockyard",
+        "awayTeamId": "canalst",
+        "date": "2026-08-04",
+        "time": "3:30 PM",
+        "venue": "Stockyard Pavilion",
+        "status": "final",
+        "homeScore": 4,
+        "awayScore": 6
+      },
+      {
+        "id": "baseball-r3-11",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "harborrow",
+        "date": "2026-08-05",
+        "time": "3:30 PM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 6,
+        "awayScore": 7
+      },
+      {
+        "id": "baseball-r4-12",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "ironside",
+        "date": "2026-08-11",
+        "time": "11:30 AM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 8,
+        "awayScore": 9
+      },
+      {
+        "id": "baseball-r4-13",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "stockyard",
+        "date": "2026-08-12",
+        "time": "9:00 AM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 5,
+        "awayScore": 2
+      },
+      {
+        "id": "baseball-r4-14",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "northgate",
+        "date": "2026-08-11",
+        "time": "11:30 AM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 3,
+        "awayScore": 7
+      },
+      {
+        "id": "baseball-r4-15",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "harborrow",
+        "date": "2026-08-12",
+        "time": "3:30 PM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 3,
+        "awayScore": 1
+      },
+      {
+        "id": "baseball-r5-16",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "stockyard",
+        "date": "2026-08-18",
+        "time": "1:00 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 8,
+        "awayScore": 5
+      },
+      {
+        "id": "baseball-r5-17",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "foundry",
+        "date": "2026-08-19",
+        "time": "1:00 PM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 5,
+        "awayScore": 3
+      },
+      {
+        "id": "baseball-r5-18",
+        "round": "regular",
+        "homeTeamId": "harborrow",
+        "awayTeamId": "rivertown",
+        "date": "2026-08-18",
+        "time": "7:30 PM",
+        "venue": "Harbor Row Grounds",
+        "status": "final",
+        "homeScore": 6,
+        "awayScore": 8
+      },
+      {
+        "id": "baseball-r5-19",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "millbrook",
+        "date": "2026-08-19",
+        "time": "1:00 PM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 2,
+        "awayScore": 4
+      },
+      {
+        "id": "baseball-r6-20",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "ironside",
+        "date": "2026-08-25",
+        "time": "1:00 PM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 9,
+        "awayScore": 5
+      },
+      {
+        "id": "baseball-r6-21",
+        "round": "regular",
+        "homeTeamId": "stockyard",
+        "awayTeamId": "harborrow",
+        "date": "2026-08-26",
+        "time": "6:00 PM",
+        "venue": "Stockyard Pavilion",
+        "status": "final",
+        "homeScore": 4,
+        "awayScore": 9
+      },
+      {
+        "id": "baseball-r6-22",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "canalst",
+        "date": "2026-08-25",
+        "time": "6:00 PM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 5,
+        "awayScore": 9
+      },
+      {
+        "id": "baseball-r6-23",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "millbrook",
+        "date": "2026-08-26",
+        "time": "11:30 AM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 0,
+        "awayScore": 7
+      },
+      {
+        "id": "baseball-r7-24",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "harborrow",
+        "date": "2026-09-01",
+        "time": "9:00 AM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 5,
+        "awayScore": 2
+      },
+      {
+        "id": "baseball-r7-25",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "northgate",
+        "date": "2026-09-02",
+        "time": "11:30 AM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 1,
+        "awayScore": 8
+      },
+      {
+        "id": "baseball-r7-26",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "stockyard",
+        "date": "2026-09-01",
+        "time": "9:00 AM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 8,
+        "awayScore": 9
+      },
+      {
+        "id": "baseball-r7-27",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "foundry",
+        "date": "2026-09-02",
+        "time": "1:00 PM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 6,
+        "awayScore": 1
+      },
+      {
+        "id": "baseball-semi-1",
+        "round": "semifinal",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "ironside",
+        "date": "2026-09-09",
+        "time": "11:30 AM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 7,
+        "awayScore": 8,
+        "seedHome": 1,
+        "seedAway": 4
+      },
+      {
+        "id": "baseball-semi-2",
+        "round": "semifinal",
+        "homeTeamId": "northgate",
+        "awayTeamId": "canalst",
+        "date": "2026-09-09",
+        "time": "9:00 AM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 6,
+        "awayScore": 5,
+        "seedHome": 2,
+        "seedAway": 3
+      },
+      {
+        "id": "baseball-final",
+        "round": "championship",
+        "homeTeamId": "ironside",
+        "awayTeamId": "northgate",
+        "date": "2026-09-16",
+        "time": "3:30 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "scheduled",
+        "homeScore": null,
+        "awayScore": null,
+        "seedHome": 4,
+        "seedAway": 2
+      }
+    ],
+    "standings": [
+      {
+        "teamId": "rivertown",
+        "wins": 6,
+        "losses": 1,
+        "pf": 35,
+        "pa": 27,
+        "streak": 1,
+        "streakType": "W"
+      },
+      {
+        "teamId": "northgate",
+        "wins": 5,
+        "losses": 2,
+        "pf": 50,
+        "pa": 28,
+        "streak": 4,
+        "streakType": "W"
+      },
+      {
+        "teamId": "canalst",
+        "wins": 4,
+        "losses": 3,
+        "pf": 33,
+        "pa": 28,
+        "streak": 1,
+        "streakType": "L"
+      },
+      {
+        "teamId": "ironside",
+        "wins": 4,
+        "losses": 3,
+        "pf": 35,
+        "pa": 39,
+        "streak": 1,
+        "streakType": "W"
+      },
+      {
+        "teamId": "millbrook",
+        "wins": 3,
+        "losses": 4,
+        "pf": 37,
+        "pa": 34,
+        "streak": 1,
+        "streakType": "L"
+      },
+      {
+        "teamId": "harborrow",
+        "wins": 3,
+        "losses": 4,
+        "pf": 32,
+        "pa": 35,
+        "streak": 1,
+        "streakType": "L"
+      },
+      {
+        "teamId": "stockyard",
+        "wins": 2,
+        "losses": 5,
+        "pf": 32,
+        "pa": 49,
+        "streak": 1,
+        "streakType": "W"
+      },
+      {
+        "teamId": "foundry",
+        "wins": 1,
+        "losses": 6,
+        "pf": 32,
+        "pa": 46,
+        "streak": 5,
+        "streakType": "L"
+      }
+    ],
+    "bracket": {
+      "seeds": [
+        {
+          "seed": 1,
+          "teamId": "rivertown"
+        },
+        {
+          "seed": 2,
+          "teamId": "northgate"
+        },
+        {
+          "seed": 3,
+          "teamId": "canalst"
+        },
+        {
+          "seed": 4,
+          "teamId": "ironside"
+        }
+      ],
+      "semifinals": [
+        {
+          "id": "baseball-semi-1",
+          "round": "semifinal",
+          "homeTeamId": "rivertown",
+          "awayTeamId": "ironside",
+          "date": "2026-09-09",
+          "time": "11:30 AM",
+          "venue": "Rivertown Common Fields",
+          "status": "final",
+          "homeScore": 7,
+          "awayScore": 8,
+          "seedHome": 1,
+          "seedAway": 4
+        },
+        {
+          "id": "baseball-semi-2",
+          "round": "semifinal",
+          "homeTeamId": "northgate",
+          "awayTeamId": "canalst",
+          "date": "2026-09-09",
+          "time": "9:00 AM",
+          "venue": "Northgate Civic Courts",
+          "status": "final",
+          "homeScore": 6,
+          "awayScore": 5,
+          "seedHome": 2,
+          "seedAway": 3
+        }
+      ],
+      "final": {
+        "id": "baseball-final",
+        "round": "championship",
+        "homeTeamId": "ironside",
+        "awayTeamId": "northgate",
+        "date": "2026-09-16",
+        "time": "3:30 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "scheduled",
+        "homeScore": null,
+        "awayScore": null,
+        "seedHome": 4,
+        "seedAway": 2
+      }
+    }
+  },
+  "basketball": {
+    "games": [
+      {
+        "id": "basketball-r1-0",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "canalst",
+        "date": "2026-08-08",
+        "time": "6:00 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 87,
+        "awayScore": 71
+      },
+      {
+        "id": "basketball-r1-1",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "harborrow",
+        "date": "2026-08-09",
+        "time": "3:30 PM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 96,
+        "awayScore": 81
+      },
+      {
+        "id": "basketball-r1-2",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "northgate",
+        "date": "2026-08-08",
+        "time": "6:00 PM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 72,
+        "awayScore": 65
+      },
+      {
+        "id": "basketball-r1-3",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "stockyard",
+        "date": "2026-08-09",
+        "time": "11:30 AM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 76,
+        "awayScore": 92
+      },
+      {
+        "id": "basketball-r2-4",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "ironside",
+        "date": "2026-08-12",
+        "time": "9:00 AM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 80,
+        "awayScore": 86
+      },
+      {
+        "id": "basketball-r2-5",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "rivertown",
+        "date": "2026-08-13",
+        "time": "3:30 PM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 68,
+        "awayScore": 88
+      },
+      {
+        "id": "basketball-r2-6",
+        "round": "regular",
+        "homeTeamId": "harborrow",
+        "awayTeamId": "foundry",
+        "date": "2026-08-12",
+        "time": "6:00 PM",
+        "venue": "Harbor Row Grounds",
+        "status": "final",
+        "homeScore": 95,
+        "awayScore": 59
+      },
+      {
+        "id": "basketball-r2-7",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "stockyard",
+        "date": "2026-08-13",
+        "time": "11:30 AM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 93,
+        "awayScore": 70
+      },
+      {
+        "id": "basketball-r3-8",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "rivertown",
+        "date": "2026-08-16",
+        "time": "3:30 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 72,
+        "awayScore": 82
+      },
+      {
+        "id": "basketball-r3-9",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "millbrook",
+        "date": "2026-08-17",
+        "time": "6:00 PM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 71,
+        "awayScore": 81
+      },
+      {
+        "id": "basketball-r3-10",
+        "round": "regular",
+        "homeTeamId": "stockyard",
+        "awayTeamId": "canalst",
+        "date": "2026-08-16",
+        "time": "3:30 PM",
+        "venue": "Stockyard Pavilion",
+        "status": "final",
+        "homeScore": 59,
+        "awayScore": 91
+      },
+      {
+        "id": "basketball-r3-11",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "harborrow",
+        "date": "2026-08-17",
+        "time": "11:30 AM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 64,
+        "awayScore": 69
+      },
+      {
+        "id": "basketball-r4-12",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "ironside",
+        "date": "2026-08-20",
+        "time": "3:30 PM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 59,
+        "awayScore": 89
+      },
+      {
+        "id": "basketball-r4-13",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "stockyard",
+        "date": "2026-08-21",
+        "time": "6:00 PM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 87,
+        "awayScore": 84
+      },
+      {
+        "id": "basketball-r4-14",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "northgate",
+        "date": "2026-08-20",
+        "time": "6:00 PM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 93,
+        "awayScore": 70
+      },
+      {
+        "id": "basketball-r4-15",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "harborrow",
+        "date": "2026-08-21",
+        "time": "11:30 AM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 64,
+        "awayScore": 88
+      },
+      {
+        "id": "basketball-r5-16",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "stockyard",
+        "date": "2026-08-24",
+        "time": "9:00 AM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 75,
+        "awayScore": 65
+      },
+      {
+        "id": "basketball-r5-17",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "foundry",
+        "date": "2026-08-25",
+        "time": "3:30 PM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 76,
+        "awayScore": 59
+      },
+      {
+        "id": "basketball-r5-18",
+        "round": "regular",
+        "homeTeamId": "harborrow",
+        "awayTeamId": "rivertown",
+        "date": "2026-08-24",
+        "time": "6:00 PM",
+        "venue": "Harbor Row Grounds",
+        "status": "final",
+        "homeScore": 64,
+        "awayScore": 91
+      },
+      {
+        "id": "basketball-r5-19",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "millbrook",
+        "date": "2026-08-25",
+        "time": "9:00 AM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 68,
+        "awayScore": 58
+      },
+      {
+        "id": "basketball-r6-20",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "ironside",
+        "date": "2026-08-28",
+        "time": "6:00 PM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 90,
+        "awayScore": 61
+      },
+      {
+        "id": "basketball-r6-21",
+        "round": "regular",
+        "homeTeamId": "stockyard",
+        "awayTeamId": "harborrow",
+        "date": "2026-08-29",
+        "time": "1:00 PM",
+        "venue": "Stockyard Pavilion",
+        "status": "final",
+        "homeScore": 94,
+        "awayScore": 73
+      },
+      {
+        "id": "basketball-r6-22",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "canalst",
+        "date": "2026-08-28",
+        "time": "9:00 AM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 77,
+        "awayScore": 83
+      },
+      {
+        "id": "basketball-r6-23",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "millbrook",
+        "date": "2026-08-29",
+        "time": "9:00 AM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 77,
+        "awayScore": 95
+      },
+      {
+        "id": "basketball-r7-24",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "harborrow",
+        "date": "2026-09-01",
+        "time": "3:30 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 81,
+        "awayScore": 90
+      },
+      {
+        "id": "basketball-r7-25",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "northgate",
+        "date": "2026-09-02",
+        "time": "11:30 AM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 96,
+        "awayScore": 93
+      },
+      {
+        "id": "basketball-r7-26",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "stockyard",
+        "date": "2026-09-01",
+        "time": "3:30 PM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 87,
+        "awayScore": 70
+      },
+      {
+        "id": "basketball-r7-27",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "foundry",
+        "date": "2026-09-02",
+        "time": "3:30 PM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 59,
+        "awayScore": 60
+      },
+      {
+        "id": "basketball-semi-1",
+        "round": "semifinal",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "harborrow",
+        "date": "2026-09-09",
+        "time": "9:00 AM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 76,
+        "awayScore": 60,
+        "seedHome": 1,
+        "seedAway": 4
+      },
+      {
+        "id": "basketball-semi-2",
+        "round": "semifinal",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "ironside",
+        "date": "2026-09-09",
+        "time": "11:30 AM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 96,
+        "awayScore": 62,
+        "seedHome": 2,
+        "seedAway": 3
+      },
+      {
+        "id": "basketball-final",
+        "round": "championship",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "rivertown",
+        "date": "2026-09-16",
+        "time": "11:30 AM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "scheduled",
+        "homeScore": null,
+        "awayScore": null,
+        "seedHome": 1,
+        "seedAway": 2
+      }
+    ],
+    "standings": [
+      {
+        "teamId": "millbrook",
+        "wins": 5,
+        "losses": 2,
+        "pf": 590,
+        "pa": 523,
+        "streak": 2,
+        "streakType": "W"
+      },
+      {
+        "teamId": "rivertown",
+        "wins": 5,
+        "losses": 2,
+        "pf": 556,
+        "pa": 508,
+        "streak": 2,
+        "streakType": "L"
+      },
+      {
+        "teamId": "ironside",
+        "wins": 4,
+        "losses": 3,
+        "pf": 551,
+        "pa": 537,
+        "streak": 2,
+        "streakType": "L"
+      },
+      {
+        "teamId": "harborrow",
+        "wins": 4,
+        "losses": 3,
+        "pf": 560,
+        "pa": 549,
+        "streak": 1,
+        "streakType": "W"
+      },
+      {
+        "teamId": "canalst",
+        "wins": 4,
+        "losses": 3,
+        "pf": 541,
+        "pa": 550,
+        "streak": 3,
+        "streakType": "W"
+      },
+      {
+        "teamId": "northgate",
+        "wins": 3,
+        "losses": 4,
+        "pf": 551,
+        "pa": 520,
+        "streak": 1,
+        "streakType": "L"
+      },
+      {
+        "teamId": "stockyard",
+        "wins": 2,
+        "losses": 5,
+        "pf": 534,
+        "pa": 582,
+        "streak": 1,
+        "streakType": "L"
+      },
+      {
+        "teamId": "foundry",
+        "wins": 1,
+        "losses": 6,
+        "pf": 461,
+        "pa": 575,
+        "streak": 1,
+        "streakType": "W"
+      }
+    ],
+    "bracket": {
+      "seeds": [
+        {
+          "seed": 1,
+          "teamId": "millbrook"
+        },
+        {
+          "seed": 2,
+          "teamId": "rivertown"
+        },
+        {
+          "seed": 3,
+          "teamId": "ironside"
+        },
+        {
+          "seed": 4,
+          "teamId": "harborrow"
+        }
+      ],
+      "semifinals": [
+        {
+          "id": "basketball-semi-1",
+          "round": "semifinal",
+          "homeTeamId": "millbrook",
+          "awayTeamId": "harborrow",
+          "date": "2026-09-09",
+          "time": "9:00 AM",
+          "venue": "Millbrook Fieldhouse",
+          "status": "final",
+          "homeScore": 76,
+          "awayScore": 60,
+          "seedHome": 1,
+          "seedAway": 4
+        },
+        {
+          "id": "basketball-semi-2",
+          "round": "semifinal",
+          "homeTeamId": "rivertown",
+          "awayTeamId": "ironside",
+          "date": "2026-09-09",
+          "time": "11:30 AM",
+          "venue": "Rivertown Common Fields",
+          "status": "final",
+          "homeScore": 96,
+          "awayScore": 62,
+          "seedHome": 2,
+          "seedAway": 3
+        }
+      ],
+      "final": {
+        "id": "basketball-final",
+        "round": "championship",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "rivertown",
+        "date": "2026-09-16",
+        "time": "11:30 AM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "scheduled",
+        "homeScore": null,
+        "awayScore": null,
+        "seedHome": 1,
+        "seedAway": 2
+      }
+    }
+  },
+  "flagfootball": {
+    "games": [
+      {
+        "id": "flagfootball-r1-0",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "canalst",
+        "date": "2026-07-21",
+        "time": "3:30 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 40,
+        "awayScore": 25
+      },
+      {
+        "id": "flagfootball-r1-1",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "harborrow",
+        "date": "2026-07-22",
+        "time": "6:00 PM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 40,
+        "awayScore": 39
+      },
+      {
+        "id": "flagfootball-r1-2",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "northgate",
+        "date": "2026-07-21",
+        "time": "3:30 PM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 0,
+        "awayScore": 39
+      },
+      {
+        "id": "flagfootball-r1-3",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "stockyard",
+        "date": "2026-07-22",
+        "time": "9:00 AM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 6,
+        "awayScore": 27
+      },
+      {
+        "id": "flagfootball-r2-4",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "ironside",
+        "date": "2026-07-28",
+        "time": "6:00 PM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 34,
+        "awayScore": 35
+      },
+      {
+        "id": "flagfootball-r2-5",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "rivertown",
+        "date": "2026-07-29",
+        "time": "9:00 AM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 0,
+        "awayScore": 19
+      },
+      {
+        "id": "flagfootball-r2-6",
+        "round": "regular",
+        "homeTeamId": "harborrow",
+        "awayTeamId": "foundry",
+        "date": "2026-07-28",
+        "time": "3:30 PM",
+        "venue": "Harbor Row Grounds",
+        "status": "final",
+        "homeScore": 27,
+        "awayScore": 20
+      },
+      {
+        "id": "flagfootball-r2-7",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "stockyard",
+        "date": "2026-07-29",
+        "time": "11:30 AM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 26,
+        "awayScore": 34
+      },
+      {
+        "id": "flagfootball-r3-8",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "rivertown",
+        "date": "2026-08-04",
+        "time": "7:30 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 42,
+        "awayScore": 33
+      },
+      {
+        "id": "flagfootball-r3-9",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "millbrook",
+        "date": "2026-08-05",
+        "time": "1:00 PM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 7,
+        "awayScore": 27
+      },
+      {
+        "id": "flagfootball-r3-10",
+        "round": "regular",
+        "homeTeamId": "stockyard",
+        "awayTeamId": "canalst",
+        "date": "2026-08-04",
+        "time": "11:30 AM",
+        "venue": "Stockyard Pavilion",
+        "status": "final",
+        "homeScore": 19,
+        "awayScore": 20
+      },
+      {
+        "id": "flagfootball-r3-11",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "harborrow",
+        "date": "2026-08-05",
+        "time": "3:30 PM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 0,
+        "awayScore": 34
+      },
+      {
+        "id": "flagfootball-r4-12",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "ironside",
+        "date": "2026-08-11",
+        "time": "7:30 PM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 20,
+        "awayScore": 18
+      },
+      {
+        "id": "flagfootball-r4-13",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "stockyard",
+        "date": "2026-08-12",
+        "time": "9:00 AM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 34,
+        "awayScore": 19
+      },
+      {
+        "id": "flagfootball-r4-14",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "northgate",
+        "date": "2026-08-11",
+        "time": "7:30 PM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 32,
+        "awayScore": 12
+      },
+      {
+        "id": "flagfootball-r4-15",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "harborrow",
+        "date": "2026-08-12",
+        "time": "7:30 PM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 32,
+        "awayScore": 34
+      },
+      {
+        "id": "flagfootball-r5-16",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "stockyard",
+        "date": "2026-08-18",
+        "time": "6:00 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 7,
+        "awayScore": 32
+      },
+      {
+        "id": "flagfootball-r5-17",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "foundry",
+        "date": "2026-08-19",
+        "time": "9:00 AM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 33,
+        "awayScore": 21
+      },
+      {
+        "id": "flagfootball-r5-18",
+        "round": "regular",
+        "homeTeamId": "harborrow",
+        "awayTeamId": "rivertown",
+        "date": "2026-08-18",
+        "time": "9:00 AM",
+        "venue": "Harbor Row Grounds",
+        "status": "final",
+        "homeScore": 6,
+        "awayScore": 7
+      },
+      {
+        "id": "flagfootball-r5-19",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "millbrook",
+        "date": "2026-08-19",
+        "time": "3:30 PM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 0,
+        "awayScore": 34
+      },
+      {
+        "id": "flagfootball-r6-20",
+        "round": "regular",
+        "homeTeamId": "northgate",
+        "awayTeamId": "ironside",
+        "date": "2026-08-25",
+        "time": "9:00 AM",
+        "venue": "Northgate Civic Courts",
+        "status": "final",
+        "homeScore": 25,
+        "awayScore": 26
+      },
+      {
+        "id": "flagfootball-r6-21",
+        "round": "regular",
+        "homeTeamId": "stockyard",
+        "awayTeamId": "harborrow",
+        "date": "2026-08-26",
+        "time": "7:30 PM",
+        "venue": "Stockyard Pavilion",
+        "status": "final",
+        "homeScore": 21,
+        "awayScore": 20
+      },
+      {
+        "id": "flagfootball-r6-22",
+        "round": "regular",
+        "homeTeamId": "foundry",
+        "awayTeamId": "canalst",
+        "date": "2026-08-25",
+        "time": "6:00 PM",
+        "venue": "Foundry Yards Complex",
+        "status": "final",
+        "homeScore": 28,
+        "awayScore": 0
+      },
+      {
+        "id": "flagfootball-r6-23",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "millbrook",
+        "date": "2026-08-26",
+        "time": "9:00 AM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 0,
+        "awayScore": 33
+      },
+      {
+        "id": "flagfootball-r7-24",
+        "round": "regular",
+        "homeTeamId": "ironside",
+        "awayTeamId": "harborrow",
+        "date": "2026-09-01",
+        "time": "7:30 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 32,
+        "awayScore": 13
+      },
+      {
+        "id": "flagfootball-r7-25",
+        "round": "regular",
+        "homeTeamId": "canalst",
+        "awayTeamId": "northgate",
+        "date": "2026-09-02",
+        "time": "11:30 AM",
+        "venue": "Canal Street Yard",
+        "status": "final",
+        "homeScore": 20,
+        "awayScore": 40
+      },
+      {
+        "id": "flagfootball-r7-26",
+        "round": "regular",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "stockyard",
+        "date": "2026-09-01",
+        "time": "1:00 PM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 35,
+        "awayScore": 33
+      },
+      {
+        "id": "flagfootball-r7-27",
+        "round": "regular",
+        "homeTeamId": "rivertown",
+        "awayTeamId": "foundry",
+        "date": "2026-09-02",
+        "time": "1:00 PM",
+        "venue": "Rivertown Common Fields",
+        "status": "final",
+        "homeScore": 13,
+        "awayScore": 18
+      },
+      {
+        "id": "flagfootball-semi-1",
+        "round": "semifinal",
+        "homeTeamId": "millbrook",
+        "awayTeamId": "harborrow",
+        "date": "2026-09-09",
+        "time": "11:30 AM",
+        "venue": "Millbrook Fieldhouse",
+        "status": "final",
+        "homeScore": 18,
+        "awayScore": 28,
+        "seedHome": 1,
+        "seedAway": 4
+      },
+      {
+        "id": "flagfootball-semi-2",
+        "round": "semifinal",
+        "homeTeamId": "ironside",
+        "awayTeamId": "stockyard",
+        "date": "2026-09-09",
+        "time": "7:30 PM",
+        "venue": "Ironside Athletic Park",
+        "status": "final",
+        "homeScore": 39,
+        "awayScore": 34,
+        "seedHome": 2,
+        "seedAway": 3
+      },
+      {
+        "id": "flagfootball-final",
+        "round": "championship",
+        "homeTeamId": "harborrow",
+        "awayTeamId": "ironside",
+        "date": "2026-09-16",
+        "time": "6:00 PM",
+        "venue": "Harbor Row Grounds",
+        "status": "scheduled",
+        "homeScore": null,
+        "awayScore": null,
+        "seedHome": 4,
+        "seedAway": 2
+      }
+    ],
+    "standings": [
+      {
+        "teamId": "millbrook",
+        "wins": 6,
+        "losses": 1,
+        "pf": 235,
+        "pa": 126,
+        "streak": 5,
+        "streakType": "W"
+      },
+      {
+        "teamId": "ironside",
+        "wins": 5,
+        "losses": 2,
+        "pf": 200,
+        "pa": 182,
+        "streak": 2,
+        "streakType": "W"
+      },
+      {
+        "teamId": "stockyard",
+        "wins": 4,
+        "losses": 3,
+        "pf": 185,
+        "pa": 148,
+        "streak": 1,
+        "streakType": "L"
+      },
+      {
+        "teamId": "harborrow",
+        "wins": 3,
+        "losses": 4,
+        "pf": 173,
+        "pa": 152,
+        "streak": 3,
+        "streakType": "L"
+      },
+      {
+        "teamId": "northgate",
+        "wins": 3,
+        "losses": 4,
+        "pf": 175,
+        "pa": 167,
+        "streak": 1,
+        "streakType": "W"
+      },
+      {
+        "teamId": "foundry",
+        "wins": 3,
+        "losses": 4,
+        "pf": 120,
+        "pa": 145,
+        "streak": 2,
+        "streakType": "W"
+      },
+      {
+        "teamId": "rivertown",
+        "wins": 3,
+        "losses": 4,
+        "pf": 106,
+        "pa": 157,
+        "streak": 2,
+        "streakType": "L"
+      },
+      {
+        "teamId": "canalst",
+        "wins": 1,
+        "losses": 6,
+        "pf": 97,
+        "pa": 214,
+        "streak": 4,
+        "streakType": "L"
+      }
+    ],
+    "bracket": {
+      "seeds": [
+        {
+          "seed": 1,
+          "teamId": "millbrook"
+        },
+        {
+          "seed": 2,
+          "teamId": "ironside"
+        },
+        {
+          "seed": 3,
+          "teamId": "stockyard"
+        },
+        {
+          "seed": 4,
+          "teamId": "harborrow"
+        }
+      ],
+      "semifinals": [
+        {
+          "id": "flagfootball-semi-1",
+          "round": "semifinal",
+          "homeTeamId": "millbrook",
+          "awayTeamId": "harborrow",
+          "date": "2026-09-09",
+          "time": "11:30 AM",
+          "venue": "Millbrook Fieldhouse",
+          "status": "final",
+          "homeScore": 18,
+          "awayScore": 28,
+          "seedHome": 1,
+          "seedAway": 4
+        },
+        {
+          "id": "flagfootball-semi-2",
+          "round": "semifinal",
+          "homeTeamId": "ironside",
+          "awayTeamId": "stockyard",
+          "date": "2026-09-09",
+          "time": "7:30 PM",
+          "venue": "Ironside Athletic Park",
+          "status": "final",
+          "homeScore": 39,
+          "awayScore": 34,
+          "seedHome": 2,
+          "seedAway": 3
+        }
+      ],
+      "final": {
+        "id": "flagfootball-final",
+        "round": "championship",
+        "homeTeamId": "harborrow",
+        "awayTeamId": "ironside",
+        "date": "2026-09-16",
+        "time": "6:00 PM",
+        "venue": "Harbor Row Grounds",
+        "status": "scheduled",
+        "homeScore": null,
+        "awayScore": null,
+        "seedHome": 4,
+        "seedAway": 2
+      }
+    }
+  }
+}

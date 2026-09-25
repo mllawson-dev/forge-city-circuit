@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 380">
+  <path d="M60,20 L260,20 L300,60 L300,220 Q300,304 160,362 Q20,304 20,220 L20,60 Z" fill="oklch(0.24 0.02 40)" stroke="oklch(0.55 0.21 25)" stroke-width="10"/>
+  <text x="160" y="209" text-anchor="middle" font-family="Anton, sans-serif" font-size="92" fill="oklch(0.97 0.004 80)" letter-spacing="1">FCC</text>
+</svg>

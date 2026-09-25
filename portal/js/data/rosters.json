@@ -1,0 +1,1352 @@
+{
+  "baseball": {
+    "ironside": [
+      {
+        "name": "Colton Kowalski",
+        "number": 32,
+        "position": "P",
+        "year": "1st season"
+      },
+      {
+        "name": "Dominic Kirkland",
+        "number": 33,
+        "position": "C",
+        "year": "1st season"
+      },
+      {
+        "name": "Kevin Marchetti",
+        "number": 48,
+        "position": "1B",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Deshawn Sorenson",
+        "number": 28,
+        "position": "2B",
+        "year": "4th season"
+      },
+      {
+        "name": "Rashad Lindqvist",
+        "number": 47,
+        "position": "3B",
+        "year": "3rd season"
+      },
+      {
+        "name": "Trevor Kirkland",
+        "number": 42,
+        "position": "SS",
+        "year": "2nd season"
+      },
+      {
+        "name": "Rashad Pruitt",
+        "number": 29,
+        "position": "LF",
+        "year": "3rd season"
+      },
+      {
+        "name": "Owen Delgado",
+        "number": 19,
+        "position": "CF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Nolan Marsh",
+        "number": 23,
+        "position": "RF",
+        "year": "2nd season"
+      },
+      {
+        "name": "Grant Stroud",
+        "number": 6,
+        "position": "DH",
+        "year": "1st season"
+      }
+    ],
+    "millbrook": [
+      {
+        "name": "Owen Petrov",
+        "number": 38,
+        "position": "P",
+        "year": "1st season"
+      },
+      {
+        "name": "Reggie Marsh",
+        "number": 26,
+        "position": "C",
+        "year": "1st season"
+      },
+      {
+        "name": "Brandon Diallo",
+        "number": 11,
+        "position": "1B",
+        "year": "3rd season"
+      },
+      {
+        "name": "Shane Villanueva",
+        "number": 3,
+        "position": "2B",
+        "year": "4th season"
+      },
+      {
+        "name": "Xavier Kirkland",
+        "number": 18,
+        "position": "3B",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Colton Okafor",
+        "number": 16,
+        "position": "SS",
+        "year": "2nd season"
+      },
+      {
+        "name": "Julian Stroud",
+        "number": 15,
+        "position": "LF",
+        "year": "4th season"
+      },
+      {
+        "name": "Tucker Kirkland",
+        "number": 1,
+        "position": "CF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Colton Kirkland",
+        "number": 25,
+        "position": "RF",
+        "year": "2nd season"
+      },
+      {
+        "name": "Trevor Holbrook",
+        "number": 48,
+        "position": "DH",
+        "year": "4th season"
+      }
+    ],
+    "rivertown": [
+      {
+        "name": "Nolan Petrov",
+        "number": 10,
+        "position": "P",
+        "year": "1st season"
+      },
+      {
+        "name": "Shane Adebayo",
+        "number": 12,
+        "position": "C",
+        "year": "2nd season"
+      },
+      {
+        "name": "Simon Villanueva",
+        "number": 30,
+        "position": "1B",
+        "year": "1st season"
+      },
+      {
+        "name": "Xavier Brantley",
+        "number": 15,
+        "position": "2B",
+        "year": "3rd season"
+      },
+      {
+        "name": "Miguel Petrov",
+        "number": 53,
+        "position": "3B",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Grant Callahan",
+        "number": 11,
+        "position": "SS",
+        "year": "4th season"
+      },
+      {
+        "name": "Corey Delgado",
+        "number": 48,
+        "position": "LF",
+        "year": "3rd season"
+      },
+      {
+        "name": "Isaiah Okafor",
+        "number": 32,
+        "position": "CF",
+        "year": "1st season"
+      },
+      {
+        "name": "Julian Kowalski",
+        "number": 9,
+        "position": "RF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Damian Boone",
+        "number": 45,
+        "position": "DH",
+        "year": "5th+ season"
+      }
+    ],
+    "foundry": [
+      {
+        "name": "Nolan Nakamura",
+        "number": 11,
+        "position": "P",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Wyatt Whitfield",
+        "number": 2,
+        "position": "C",
+        "year": "4th season"
+      },
+      {
+        "name": "Owen Petrov",
+        "number": 15,
+        "position": "1B",
+        "year": "2nd season"
+      },
+      {
+        "name": "Tyrell Guerrero",
+        "number": 20,
+        "position": "2B",
+        "year": "2nd season"
+      },
+      {
+        "name": "Colton Okoye",
+        "number": 36,
+        "position": "3B",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Malik Whitfield",
+        "number": 32,
+        "position": "SS",
+        "year": "1st season"
+      },
+      {
+        "name": "Miguel Vance",
+        "number": 46,
+        "position": "LF",
+        "year": "2nd season"
+      },
+      {
+        "name": "Kevin Vance",
+        "number": 10,
+        "position": "CF",
+        "year": "2nd season"
+      },
+      {
+        "name": "Antoine Reyes",
+        "number": 39,
+        "position": "RF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Wyatt Okoye",
+        "number": 50,
+        "position": "DH",
+        "year": "4th season"
+      }
+    ],
+    "stockyard": [
+      {
+        "name": "Kevin Stroud",
+        "number": 4,
+        "position": "P",
+        "year": "4th season"
+      },
+      {
+        "name": "Noah Diallo",
+        "number": 22,
+        "position": "C",
+        "year": "1st season"
+      },
+      {
+        "name": "Reggie Okoye",
+        "number": 11,
+        "position": "1B",
+        "year": "2nd season"
+      },
+      {
+        "name": "Colton Pruitt",
+        "number": 52,
+        "position": "2B",
+        "year": "4th season"
+      },
+      {
+        "name": "Shane Delgado",
+        "number": 26,
+        "position": "3B",
+        "year": "1st season"
+      },
+      {
+        "name": "Colton Reyes",
+        "number": 48,
+        "position": "SS",
+        "year": "3rd season"
+      },
+      {
+        "name": "Deshawn Marsh",
+        "number": 43,
+        "position": "LF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Dominic Sabatini",
+        "number": 49,
+        "position": "CF",
+        "year": "1st season"
+      },
+      {
+        "name": "Marcus Lindqvist",
+        "number": 53,
+        "position": "RF",
+        "year": "1st season"
+      },
+      {
+        "name": "Miguel Crenshaw",
+        "number": 21,
+        "position": "DH",
+        "year": "5th+ season"
+      }
+    ],
+    "northgate": [
+      {
+        "name": "Nolan Kowalski",
+        "number": 6,
+        "position": "P",
+        "year": "4th season"
+      },
+      {
+        "name": "Jamal Marchetti",
+        "number": 38,
+        "position": "C",
+        "year": "1st season"
+      },
+      {
+        "name": "Eli Pruitt",
+        "number": 37,
+        "position": "1B",
+        "year": "1st season"
+      },
+      {
+        "name": "Eli Sorenson",
+        "number": 31,
+        "position": "2B",
+        "year": "2nd season"
+      },
+      {
+        "name": "Preston Emery",
+        "number": 17,
+        "position": "3B",
+        "year": "2nd season"
+      },
+      {
+        "name": "Xavier Stroud",
+        "number": 53,
+        "position": "SS",
+        "year": "4th season"
+      },
+      {
+        "name": "Andre Kirkland",
+        "number": 45,
+        "position": "LF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Malik Lindqvist",
+        "number": 32,
+        "position": "CF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Tyrell Guerrero",
+        "number": 5,
+        "position": "RF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Deshawn Hargrove",
+        "number": 29,
+        "position": "DH",
+        "year": "3rd season"
+      }
+    ],
+    "harborrow": [
+      {
+        "name": "Malik Nakamura",
+        "number": 20,
+        "position": "P",
+        "year": "3rd season"
+      },
+      {
+        "name": "Caleb Guerrero",
+        "number": 24,
+        "position": "C",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Antoine Stroud",
+        "number": 34,
+        "position": "1B",
+        "year": "3rd season"
+      },
+      {
+        "name": "Miguel Diallo",
+        "number": 53,
+        "position": "2B",
+        "year": "4th season"
+      },
+      {
+        "name": "Brandon Boone",
+        "number": 18,
+        "position": "3B",
+        "year": "3rd season"
+      },
+      {
+        "name": "Eli Faulkner",
+        "number": 10,
+        "position": "SS",
+        "year": "3rd season"
+      },
+      {
+        "name": "Kevin Okafor",
+        "number": 45,
+        "position": "LF",
+        "year": "4th season"
+      },
+      {
+        "name": "Wyatt Petrov",
+        "number": 28,
+        "position": "CF",
+        "year": "2nd season"
+      },
+      {
+        "name": "Eli Callahan",
+        "number": 42,
+        "position": "RF",
+        "year": "4th season"
+      },
+      {
+        "name": "Deshawn Villanueva",
+        "number": 2,
+        "position": "DH",
+        "year": "4th season"
+      }
+    ],
+    "canalst": [
+      {
+        "name": "Dominic Hargrove",
+        "number": 5,
+        "position": "P",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Nolan Hargrove",
+        "number": 3,
+        "position": "C",
+        "year": "2nd season"
+      },
+      {
+        "name": "Simon Nakamura",
+        "number": 8,
+        "position": "1B",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Owen Kowalski",
+        "number": 9,
+        "position": "2B",
+        "year": "3rd season"
+      },
+      {
+        "name": "Kevin Castellano",
+        "number": 49,
+        "position": "3B",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Miguel Kirkland",
+        "number": 11,
+        "position": "SS",
+        "year": "1st season"
+      },
+      {
+        "name": "Miguel Okoye",
+        "number": 24,
+        "position": "LF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Malik Brantley",
+        "number": 4,
+        "position": "CF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Simon Callahan",
+        "number": 10,
+        "position": "RF",
+        "year": "4th season"
+      },
+      {
+        "name": "Tucker Sabatini",
+        "number": 2,
+        "position": "DH",
+        "year": "1st season"
+      }
+    ]
+  },
+  "basketball": {
+    "ironside": [
+      {
+        "name": "Tyrell Holbrook",
+        "number": 25,
+        "position": "PG",
+        "year": "3rd season"
+      },
+      {
+        "name": "Eli Kowalski",
+        "number": 17,
+        "position": "SG",
+        "year": "1st season"
+      },
+      {
+        "name": "Caleb Okafor",
+        "number": 9,
+        "position": "SF",
+        "year": "4th season"
+      },
+      {
+        "name": "Corey Kirkland",
+        "number": 10,
+        "position": "PF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Nolan Castellano",
+        "number": 6,
+        "position": "C",
+        "year": "4th season"
+      },
+      {
+        "name": "Colton Marchetti",
+        "number": 19,
+        "position": "PG",
+        "year": "4th season"
+      },
+      {
+        "name": "Eli Faulkner",
+        "number": 32,
+        "position": "SG",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Xavier Sorenson",
+        "number": 5,
+        "position": "SF",
+        "year": "1st season"
+      }
+    ],
+    "millbrook": [
+      {
+        "name": "Tucker Boone",
+        "number": 9,
+        "position": "PG",
+        "year": "2nd season"
+      },
+      {
+        "name": "Dominic Emery",
+        "number": 19,
+        "position": "SG",
+        "year": "4th season"
+      },
+      {
+        "name": "Simon Kowalski",
+        "number": 6,
+        "position": "SF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Jamal Sorenson",
+        "number": 1,
+        "position": "PF",
+        "year": "3rd season"
+      },
+      {
+        "name": "Antoine Whitfield",
+        "number": 15,
+        "position": "C",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Reggie Okoye",
+        "number": 17,
+        "position": "PG",
+        "year": "4th season"
+      },
+      {
+        "name": "Preston Castellano",
+        "number": 20,
+        "position": "SG",
+        "year": "1st season"
+      },
+      {
+        "name": "Xavier Emery",
+        "number": 28,
+        "position": "SF",
+        "year": "2nd season"
+      }
+    ],
+    "rivertown": [
+      {
+        "name": "Xavier Nakamura",
+        "number": 5,
+        "position": "PG",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Julian Stroud",
+        "number": 53,
+        "position": "SG",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Eli Faulkner",
+        "number": 51,
+        "position": "SF",
+        "year": "1st season"
+      },
+      {
+        "name": "Isaiah Hargrove",
+        "number": 52,
+        "position": "PF",
+        "year": "2nd season"
+      },
+      {
+        "name": "Levi Boone",
+        "number": 2,
+        "position": "C",
+        "year": "3rd season"
+      },
+      {
+        "name": "Grant Petrov",
+        "number": 33,
+        "position": "PG",
+        "year": "4th season"
+      },
+      {
+        "name": "Simon Vance",
+        "number": 16,
+        "position": "SG",
+        "year": "3rd season"
+      },
+      {
+        "name": "Reggie Okafor",
+        "number": 15,
+        "position": "SF",
+        "year": "1st season"
+      }
+    ],
+    "foundry": [
+      {
+        "name": "Deshawn Brantley",
+        "number": 17,
+        "position": "PG",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Deshawn Castellano",
+        "number": 52,
+        "position": "SG",
+        "year": "1st season"
+      },
+      {
+        "name": "Rashad Villanueva",
+        "number": 24,
+        "position": "SF",
+        "year": "4th season"
+      },
+      {
+        "name": "Owen Lindqvist",
+        "number": 26,
+        "position": "PF",
+        "year": "4th season"
+      },
+      {
+        "name": "Marcus Guerrero",
+        "number": 48,
+        "position": "C",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Noah Faulkner",
+        "number": 50,
+        "position": "PG",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Andre Villanueva",
+        "number": 21,
+        "position": "SG",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Simon Kirkland",
+        "number": 35,
+        "position": "SF",
+        "year": "4th season"
+      }
+    ],
+    "stockyard": [
+      {
+        "name": "Preston Marchetti",
+        "number": 41,
+        "position": "PG",
+        "year": "3rd season"
+      },
+      {
+        "name": "Eli Crenshaw",
+        "number": 36,
+        "position": "SG",
+        "year": "3rd season"
+      },
+      {
+        "name": "Shane Okafor",
+        "number": 7,
+        "position": "SF",
+        "year": "2nd season"
+      },
+      {
+        "name": "Trevor Hargrove",
+        "number": 20,
+        "position": "PF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Kevin Villanueva",
+        "number": 24,
+        "position": "C",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Grant Hargrove",
+        "number": 45,
+        "position": "PG",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Brandon Delgado",
+        "number": 2,
+        "position": "SG",
+        "year": "2nd season"
+      },
+      {
+        "name": "Preston Adebayo",
+        "number": 29,
+        "position": "SF",
+        "year": "1st season"
+      }
+    ],
+    "northgate": [
+      {
+        "name": "Owen Sabatini",
+        "number": 31,
+        "position": "PG",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Tyrell Okafor",
+        "number": 6,
+        "position": "SG",
+        "year": "4th season"
+      },
+      {
+        "name": "Jamal Stroud",
+        "number": 23,
+        "position": "SF",
+        "year": "1st season"
+      },
+      {
+        "name": "Trevor Diallo",
+        "number": 15,
+        "position": "PF",
+        "year": "1st season"
+      },
+      {
+        "name": "Preston Callahan",
+        "number": 43,
+        "position": "C",
+        "year": "1st season"
+      },
+      {
+        "name": "Miguel Okafor",
+        "number": 50,
+        "position": "PG",
+        "year": "1st season"
+      },
+      {
+        "name": "Xavier Stroud",
+        "number": 41,
+        "position": "SG",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Dominic Crenshaw",
+        "number": 20,
+        "position": "SF",
+        "year": "1st season"
+      }
+    ],
+    "harborrow": [
+      {
+        "name": "Dominic Pruitt",
+        "number": 9,
+        "position": "PG",
+        "year": "4th season"
+      },
+      {
+        "name": "Marcus Okafor",
+        "number": 32,
+        "position": "SG",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Malik Reyes",
+        "number": 31,
+        "position": "SF",
+        "year": "2nd season"
+      },
+      {
+        "name": "Malik Kirkland",
+        "number": 38,
+        "position": "PF",
+        "year": "3rd season"
+      },
+      {
+        "name": "Tyrell Petrov",
+        "number": 36,
+        "position": "C",
+        "year": "1st season"
+      },
+      {
+        "name": "Kevin Reyes",
+        "number": 49,
+        "position": "PG",
+        "year": "3rd season"
+      },
+      {
+        "name": "Trevor Diallo",
+        "number": 53,
+        "position": "SG",
+        "year": "4th season"
+      },
+      {
+        "name": "Grant Okoye",
+        "number": 34,
+        "position": "SF",
+        "year": "1st season"
+      }
+    ],
+    "canalst": [
+      {
+        "name": "Simon Guerrero",
+        "number": 23,
+        "position": "PG",
+        "year": "4th season"
+      },
+      {
+        "name": "Dominic Callahan",
+        "number": 2,
+        "position": "SG",
+        "year": "3rd season"
+      },
+      {
+        "name": "Simon Kowalski",
+        "number": 6,
+        "position": "SF",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Trevor Petrov",
+        "number": 49,
+        "position": "PF",
+        "year": "2nd season"
+      },
+      {
+        "name": "Marcus Petrov",
+        "number": 14,
+        "position": "C",
+        "year": "4th season"
+      },
+      {
+        "name": "Kevin Faulkner",
+        "number": 29,
+        "position": "PG",
+        "year": "4th season"
+      },
+      {
+        "name": "Damian Lindqvist",
+        "number": 20,
+        "position": "SG",
+        "year": "1st season"
+      },
+      {
+        "name": "Corey Marchetti",
+        "number": 55,
+        "position": "SF",
+        "year": "3rd season"
+      }
+    ]
+  },
+  "flagfootball": {
+    "ironside": [
+      {
+        "name": "Malik Sabatini",
+        "number": 18,
+        "position": "QB",
+        "year": "2nd season"
+      },
+      {
+        "name": "Julian Okafor",
+        "number": 43,
+        "position": "C",
+        "year": "3rd season"
+      },
+      {
+        "name": "Nolan Kowalski",
+        "number": 19,
+        "position": "WR",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Isaiah Sorenson",
+        "number": 6,
+        "position": "WR",
+        "year": "1st season"
+      },
+      {
+        "name": "Eli Kirkland",
+        "number": 49,
+        "position": "FLEX",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Shane Delgado",
+        "number": 2,
+        "position": "RB",
+        "year": "3rd season"
+      },
+      {
+        "name": "Jamal Reyes",
+        "number": 5,
+        "position": "S",
+        "year": "3rd season"
+      },
+      {
+        "name": "Reggie Faulkner",
+        "number": 50,
+        "position": "QB",
+        "year": "4th season"
+      },
+      {
+        "name": "Colton Kowalski",
+        "number": 28,
+        "position": "C",
+        "year": "1st season"
+      }
+    ],
+    "millbrook": [
+      {
+        "name": "Antoine Holbrook",
+        "number": 3,
+        "position": "QB",
+        "year": "1st season"
+      },
+      {
+        "name": "Xavier Nakamura",
+        "number": 7,
+        "position": "C",
+        "year": "3rd season"
+      },
+      {
+        "name": "Levi Marsh",
+        "number": 24,
+        "position": "WR",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Wyatt Kirkland",
+        "number": 43,
+        "position": "WR",
+        "year": "3rd season"
+      },
+      {
+        "name": "Kevin Holbrook",
+        "number": 32,
+        "position": "FLEX",
+        "year": "4th season"
+      },
+      {
+        "name": "Shane Marsh",
+        "number": 55,
+        "position": "RB",
+        "year": "2nd season"
+      },
+      {
+        "name": "Antoine Sorenson",
+        "number": 25,
+        "position": "S",
+        "year": "2nd season"
+      },
+      {
+        "name": "Damian Okoye",
+        "number": 28,
+        "position": "QB",
+        "year": "3rd season"
+      },
+      {
+        "name": "Damian Hargrove",
+        "number": 1,
+        "position": "C",
+        "year": "1st season"
+      }
+    ],
+    "rivertown": [
+      {
+        "name": "Julian Nakamura",
+        "number": 18,
+        "position": "QB",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Grant Callahan",
+        "number": 17,
+        "position": "C",
+        "year": "3rd season"
+      },
+      {
+        "name": "Preston Callahan",
+        "number": 55,
+        "position": "WR",
+        "year": "1st season"
+      },
+      {
+        "name": "Shane Pruitt",
+        "number": 27,
+        "position": "WR",
+        "year": "4th season"
+      },
+      {
+        "name": "Grant Boone",
+        "number": 8,
+        "position": "FLEX",
+        "year": "1st season"
+      },
+      {
+        "name": "Corey Emery",
+        "number": 50,
+        "position": "RB",
+        "year": "1st season"
+      },
+      {
+        "name": "Tucker Sorenson",
+        "number": 25,
+        "position": "S",
+        "year": "4th season"
+      },
+      {
+        "name": "Shane Nakamura",
+        "number": 28,
+        "position": "QB",
+        "year": "4th season"
+      },
+      {
+        "name": "Julian Marsh",
+        "number": 29,
+        "position": "C",
+        "year": "1st season"
+      }
+    ],
+    "foundry": [
+      {
+        "name": "Damian Villanueva",
+        "number": 3,
+        "position": "QB",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Colton Diallo",
+        "number": 38,
+        "position": "C",
+        "year": "3rd season"
+      },
+      {
+        "name": "Isaiah Petrov",
+        "number": 37,
+        "position": "WR",
+        "year": "2nd season"
+      },
+      {
+        "name": "Grant Stroud",
+        "number": 51,
+        "position": "WR",
+        "year": "1st season"
+      },
+      {
+        "name": "Julian Kirkland",
+        "number": 25,
+        "position": "FLEX",
+        "year": "2nd season"
+      },
+      {
+        "name": "Corey Brantley",
+        "number": 48,
+        "position": "RB",
+        "year": "1st season"
+      },
+      {
+        "name": "Andre Guerrero",
+        "number": 15,
+        "position": "S",
+        "year": "1st season"
+      },
+      {
+        "name": "Rashad Emery",
+        "number": 27,
+        "position": "QB",
+        "year": "3rd season"
+      },
+      {
+        "name": "Rashad Sorenson",
+        "number": 53,
+        "position": "C",
+        "year": "5th+ season"
+      }
+    ],
+    "stockyard": [
+      {
+        "name": "Marcus Crenshaw",
+        "number": 41,
+        "position": "QB",
+        "year": "3rd season"
+      },
+      {
+        "name": "Antoine Reyes",
+        "number": 5,
+        "position": "C",
+        "year": "3rd season"
+      },
+      {
+        "name": "Colton Guerrero",
+        "number": 9,
+        "position": "WR",
+        "year": "4th season"
+      },
+      {
+        "name": "Julian Villanueva",
+        "number": 2,
+        "position": "WR",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Jamal Delgado",
+        "number": 4,
+        "position": "FLEX",
+        "year": "3rd season"
+      },
+      {
+        "name": "Nolan Adebayo",
+        "number": 52,
+        "position": "RB",
+        "year": "2nd season"
+      },
+      {
+        "name": "Andre Lindqvist",
+        "number": 23,
+        "position": "S",
+        "year": "1st season"
+      },
+      {
+        "name": "Rashad Emery",
+        "number": 6,
+        "position": "QB",
+        "year": "1st season"
+      },
+      {
+        "name": "Malik Crenshaw",
+        "number": 50,
+        "position": "C",
+        "year": "2nd season"
+      }
+    ],
+    "northgate": [
+      {
+        "name": "Trevor Lindqvist",
+        "number": 5,
+        "position": "QB",
+        "year": "1st season"
+      },
+      {
+        "name": "Tucker Hargrove",
+        "number": 15,
+        "position": "C",
+        "year": "1st season"
+      },
+      {
+        "name": "Rashad Sabatini",
+        "number": 2,
+        "position": "WR",
+        "year": "3rd season"
+      },
+      {
+        "name": "Shane Hargrove",
+        "number": 44,
+        "position": "WR",
+        "year": "1st season"
+      },
+      {
+        "name": "Reggie Faulkner",
+        "number": 27,
+        "position": "FLEX",
+        "year": "3rd season"
+      },
+      {
+        "name": "Kevin Guerrero",
+        "number": 17,
+        "position": "RB",
+        "year": "2nd season"
+      },
+      {
+        "name": "Julian Callahan",
+        "number": 9,
+        "position": "S",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Miguel Sabatini",
+        "number": 18,
+        "position": "QB",
+        "year": "3rd season"
+      },
+      {
+        "name": "Nolan Adebayo",
+        "number": 12,
+        "position": "C",
+        "year": "1st season"
+      }
+    ],
+    "harborrow": [
+      {
+        "name": "Tucker Kowalski",
+        "number": 14,
+        "position": "QB",
+        "year": "4th season"
+      },
+      {
+        "name": "Colton Whitfield",
+        "number": 28,
+        "position": "C",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Tucker Sorenson",
+        "number": 38,
+        "position": "WR",
+        "year": "4th season"
+      },
+      {
+        "name": "Owen Hargrove",
+        "number": 49,
+        "position": "WR",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Colton Kowalski",
+        "number": 54,
+        "position": "FLEX",
+        "year": "2nd season"
+      },
+      {
+        "name": "Antoine Villanueva",
+        "number": 55,
+        "position": "RB",
+        "year": "3rd season"
+      },
+      {
+        "name": "Dominic Marchetti",
+        "number": 3,
+        "position": "S",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Owen Holbrook",
+        "number": 1,
+        "position": "QB",
+        "year": "1st season"
+      },
+      {
+        "name": "Owen Vance",
+        "number": 16,
+        "position": "C",
+        "year": "3rd season"
+      }
+    ],
+    "canalst": [
+      {
+        "name": "Antoine Delgado",
+        "number": 49,
+        "position": "QB",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Owen Faulkner",
+        "number": 20,
+        "position": "C",
+        "year": "3rd season"
+      },
+      {
+        "name": "Rashad Okoye",
+        "number": 32,
+        "position": "WR",
+        "year": "2nd season"
+      },
+      {
+        "name": "Andre Callahan",
+        "number": 41,
+        "position": "WR",
+        "year": "2nd season"
+      },
+      {
+        "name": "Miguel Brantley",
+        "number": 39,
+        "position": "FLEX",
+        "year": "1st season"
+      },
+      {
+        "name": "Owen Guerrero",
+        "number": 42,
+        "position": "RB",
+        "year": "2nd season"
+      },
+      {
+        "name": "Noah Boone",
+        "number": 43,
+        "position": "S",
+        "year": "2nd season"
+      },
+      {
+        "name": "Damian Okoye",
+        "number": 6,
+        "position": "QB",
+        "year": "5th+ season"
+      },
+      {
+        "name": "Levi Marchetti",
+        "number": 52,
+        "position": "C",
+        "year": "1st season"
+      }
+    ]
+  }
+}

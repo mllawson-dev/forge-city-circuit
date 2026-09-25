@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Forge Crest</title>
+<meta name="description" content="Interactive three-dimensional study of the Forge City Circuit crest.">
+<meta name="theme-color" content="#130b08">
+<link rel="icon" href="../portal/public/favicon.svg" type="image/svg+xml">
+<style>
+  @font-face{font-family:Anton;src:url('../assets/fonts/anton-regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+  @font-face{font-family:'Barlow Condensed';src:url('../assets/fonts/barlow-condensed-500.ttf') format('truetype');font-style:normal;font-weight:500;font-display:swap}
+  @font-face{font-family:'Barlow Condensed';src:url('../assets/fonts/barlow-condensed-600.ttf') format('truetype');font-style:normal;font-weight:600;font-display:swap}
+  @font-face{font-family:'Barlow Condensed';src:url('../assets/fonts/barlow-condensed-700.ttf') format('truetype');font-style:normal;font-weight:700;font-display:swap}
+  @font-face{font-family:'Barlow Condensed';src:url('../assets/fonts/barlow-condensed-500-italic.ttf') format('truetype');font-style:italic;font-weight:500;font-display:swap}
+  :root{
+    --ink:#130b08;
+    --panel:#221712;
+    --panel-2:#1a110d;
+    --paper:#f6f5f2;
+    --steel:#6d7277;
+    --steel-soft:#9aa0a4;
+    --league-red:#d01c29;
+    --forge-amber:#cc6600;
+    --circuit-blue:#426882;
+    --rivet-gold:#e0af3b;
+    --hairline: rgba(246,245,242,0.14);
+    --hairline-strong: rgba(246,245,242,0.32);
+    --font-display:'Anton', 'Arial Narrow', sans-serif;
+    --font-body:'Barlow Condensed', 'Segoe UI', sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--font-body);
+    font-weight:500;
+    line-height:1.5;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--league-red);color:var(--paper);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  /* ---------- stage ---------- */
+  .stage{
+    position:relative;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:24px;
+    padding: clamp(20px,4vw,40px) clamp(20px,5vw,56px) clamp(24px,4vw,44px);
+    overflow:hidden;
+    background:
+      repeating-linear-gradient(135deg, rgba(246,245,242,0.025) 0px, rgba(246,245,242,0.025) 2px, transparent 2px, transparent 26px),
+      radial-gradient(ellipse at 50% 42%, var(--panel-2) 0%, var(--ink) 70%);
+    cursor:grab;
+    touch-action:none;
+    outline:none;
+  }
+  .stage.dragging{cursor:grabbing;}
+  .stage:focus-visible{box-shadow: inset 0 0 0 2px var(--league-red);}
+
+  .crest-wrap{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    pointer-events:none;
+  }
+
+  /* static, SVG-rendered crest — the resting-state fallback that Three.js
+     crossfades over once it loads and assembles. Traces the identity
+     system's own shield path exactly, so it holds up on its own if the
+     WebGL layer never loads, and matches the 3D build vertex-for-vertex. */
+  .static-crest{
+    position:relative;
+    width:min(30vw, 300px);
+    filter: drop-shadow(0 0 46px rgba(208,28,41,0.5));
+    transition: opacity 1.1s cubic-bezier(.2,.7,.2,1);
+  }
+  .static-crest svg{width:100%; height:auto; display:block; overflow:visible;}
+
+  /* ---------- webgl canvas ---------- */
+  #scene{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:block;
+    opacity:0;
+    transition: opacity 1.1s cubic-bezier(.2,.7,.2,1);
+  }
+  #scene.ready{opacity:1;}
+
+  /* ---------- HUD chrome ---------- */
+  .hud-top{
+    position:relative; z-index:2;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .hud-brand .tag{
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:var(--paper);
+    margin:0;
+  }
+  .hud-brand .sub{
+    margin:6px 0 0;
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--steel-soft);
+  }
+  .hud-links{display:flex; align-items:center; gap:8px;}
+  .hud-links a{
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+    padding:8px 10px;
+    border:1px solid var(--hairline-strong);
+    font-family:var(--font-display);
+    font-size:12px;
+    letter-spacing:1.5px;
+    color:var(--steel-soft);
+    text-decoration:none;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .hud-links a:hover,.hud-links a:focus-visible{color:var(--paper);border-color:var(--league-red);}
+
+  .hud-bottom{
+    position:relative; z-index:2;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .spec-plate{
+    border:1px solid var(--hairline-strong);
+    background: rgba(19,11,8,0.55);
+    padding:12px 16px;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    max-width: 260px;
+  }
+  .spec-plate .row{
+    display:flex;
+    gap:10px;
+    font-size:12px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+  }
+  .spec-plate .row .k{color:var(--steel); flex:none; width:64px;}
+  .spec-plate .row .v{color:var(--paper); font-weight:600;}
+
+  .hint{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--steel-soft);
+    opacity:0.85;
+    transition: opacity .5s ease;
+  }
+  .hint svg{width:16px;height:16px;flex:none;opacity:.8;}
+  .hint.hidden{opacity:0;}
+
+  @media (max-width:720px){
+    .static-crest{width:min(48vw,220px);}
+    .hud-bottom{flex-direction:column; align-items:flex-start;}
+    .hint{order:-1;}
+    .hud-links a:last-child{display:none;}
+  }
+
+  /* ?embed=1 — used when this piece is iframed into the case study page:
+     just the crest, no About strip, so the embed can be sized to one
+     viewport with nothing to scroll to underneath it. */
+  html.embed-mode .about, html.embed-mode .hud-links{display:none;}
+
+  /* ---------- about strip ---------- */
+  .about{
+    border-top:1px solid var(--hairline);
+    background:var(--ink);
+    padding: 64px clamp(20px,5vw,56px) 72px;
+  }
+  .about .container{max-width:720px; margin:0 auto;}
+  .about .tag{
+    font-size:13px; font-weight:700; letter-spacing:4px;
+    text-transform:uppercase; color:var(--league-red); margin:0 0 14px;
+  }
+  .about h2{
+    font-family:var(--font-display);
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:clamp(24px,4vw,34px);
+    line-height:1.15;
+    margin:0 0 20px;
+    text-wrap:balance;
+  }
+  .about p{
+    font-size:18px;
+    color:var(--steel-soft);
+    margin:0 0 16px;
+    max-width:62ch;
+  }
+  .about p:last-of-type{margin-bottom:0;}
+  .about .credit{
+    margin-top:36px;
+    padding-top:20px;
+    border-top:1px solid var(--hairline);
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--steel);
+  }
+  .reveal-up{
+    opacity:0;
+    transform:translateY(16px);
+    transition: opacity .8s ease, transform .8s ease;
+  }
+  .reveal-up.in{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+
+<main>
+  <section class="stage" id="stage" tabindex="0" role="img"
+    aria-label="Rotating three-dimensional Forge City Circuit crest — a riveted steel shield plate. Drag, or use the arrow keys, to turn it.">
+
+    <div class="crest-wrap">
+      <div class="static-crest" id="staticCrest">
+        <!-- Traces the identity system's league mark exactly (same path,
+             viewBox, and rivet coordinates as IconSheet.dc.html / icons.js)
+             so the resting-state fallback matches the locked crest. -->
+        <svg viewBox="0 0 320 380" role="img" aria-hidden="true">
+          <defs>
+            <radialGradient id="rivetDome" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#fbe3ad"/>
+              <stop offset="55%" stop-color="var(--rivet-gold)"/>
+              <stop offset="100%" stop-color="#7a5417"/>
+            </radialGradient>
+          </defs>
+          <path d="M60,20 L260,20 L300,60 L300,220 Q300,304 160,362 Q20,304 20,220 L20,60 Z"
+                style="fill:var(--panel); stroke:var(--league-red); stroke-width:6"/>
+          <path d="M74,34 L246,34 L286,74 L286,216 Q286,290 160,342 Q34,290 34,216 L34,74 Z"
+                style="fill:none; stroke:var(--hairline-strong); stroke-width:2"/>
+          <circle cx="60" cy="20" r="6" fill="url(#rivetDome)"/>
+          <circle cx="260" cy="20" r="6" fill="url(#rivetDome)"/>
+          <circle cx="300" cy="60" r="6" fill="url(#rivetDome)"/>
+          <circle cx="300" cy="220" r="6" fill="url(#rivetDome)"/>
+          <circle cx="20" cy="60" r="6" fill="url(#rivetDome)"/>
+          <circle cx="20" cy="220" r="6" fill="url(#rivetDome)"/>
+          <ellipse cx="160" cy="176" rx="82" ry="48" style="fill:none; stroke:var(--league-red); stroke-width:9"/>
+          <text x="160" y="193" text-anchor="middle" style="font-family:var(--font-display); font-size:46px; fill:var(--paper); letter-spacing:1px">FCC</text>
+        </svg>
+      </div>
+    </div>
+
+    <canvas id="scene" aria-hidden="true"></canvas>
+
+    <header class="hud-top">
+      <div class="hud-brand">
+        <p class="tag">Forge City Circuit</p>
+        <p class="sub">Identity Mark — Forged Assembly</p>
+      </div>
+      <nav class="hud-links" aria-label="Forge City Circuit project">
+        <a href="../">Project Home</a>
+        <a href="../case-study/">Case Study</a>
+      </nav>
+    </header>
+
+    <div class="hud-bottom">
+      <div class="spec-plate">
+        <div class="row"><span class="k">Mark</span><span class="v">Shield, Riveted</span></div>
+        <div class="row"><span class="k">Alloy</span><span class="v">Cast Red Steel</span></div>
+        <div class="row"><span class="k">Plant</span><span class="v">Forge City, Est. 2026</span></div>
+      </div>
+      <div class="hint" id="hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12h18"/><path d="M7 7l-4 5 4 5"/><path d="M17 7l4 5-4 5"/>
+        </svg>
+        Drag to inspect
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <p class="tag reveal-up" id="aboutTag">The Mark</p>
+      <h2 class="reveal-up" id="aboutHeading">One shield, forged in three dimensions.</h2>
+      <p class="reveal-up">The Forge City Circuit crest was built flat first — for jerseys, banners, ticket
+        stock, broadcast lower-thirds: a chamfered steel plate, six rivets, one monogram, no gradients that
+        don't survive a single spot color. This piece rebuilds that same plate in the round, cast in forged
+        red steel and lit like it just came off the line, to see whether the mark holds up as something you
+        can turn in your hand and not just print on a jersey.</p>
+      <p class="reveal-up">Drag the crest above to turn it, or use the arrow keys. The same dimensional study
+        now anchors the primary case study and the compact visual showcase.</p>
+      <p class="credit reveal-up">Forge City Circuit — Brand Identity System</p>
+    </div>
+  </section>
+</main>
+
+<script src="../assets/vendor/three.r128.min.js"></script>
+
+<script>
+(function(){
+  'use strict';
+
+  if (new URLSearchParams(location.search).get('embed')){
+    document.documentElement.classList.add('embed-mode');
+  }
+
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var COLORS = {
+    ink: 0x130b08,
+    panel: 0x221712,
+    steel: 0x6d7277,
+    steelSoft: 0x9aa0a4,
+    paper: 0xf6f5f2,
+    red: 0xd01c29,
+    amber: 0xcc6600,
+    blue: 0x426882,
+    gold: 0xe0af3b,
+    plate: 0x2a1d16
+  };
+
+  // ---- shield / plate silhouette traced from the identity system's own
+  // path, not a stand-in shape: SHIELD_PATH from icons.js is
+  //   M60,20 L260,20 L300,60 L300,220 Q300,304 160,362 Q20,304 20,220 L20,60 Z
+  // (viewBox 0 0 320 380) — a flat top with two chamfered corners, straight
+  // sides, then two quadratic curves sweeping down to a point at the
+  // bottom. toLocal() re-centers and scales that same path into Three
+  // units and flips Y (SVG is Y-down); RIVETS below is the identity
+  // system's own six rivet coordinates run through the same conversion.
+  var SVG_SCALE = 0.0082;
+  var SVG_CX = 160, SVG_CY = 191; // path bounding-box center (x:20-300, y:20-362)
+  function toLocal(svgX, svgY){
+    return [ (svgX - SVG_CX) * SVG_SCALE, (SVG_CY - svgY) * SVG_SCALE ];
+  }
+  var RIVET_SVG_POINTS = [
+    [60, 20], [260, 20], [300, 60], [300, 220], [20, 60], [20, 220]
+  ];
+
+  function initHero(){
+    if (!window.THREE){
+      console.warn('[forge-crest] Three.js did not load — showing the static crest only.');
+      return;
+    }
+    var THREE = window.THREE;
+
+    var stage = document.getElementById('stage');
+    var canvas = document.getElementById('scene');
+    var staticCrest = document.getElementById('staticCrest');
+    var hint = document.getElementById('hint');
+
+    // ---------------- renderer / scene / camera ----------------
+    var renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+    } catch (e){
+      console.warn('[forge-crest] WebGL unavailable — showing the static crest only.');
+      return;
+    }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
+
+    function stageSize(){
+      var r = stage.getBoundingClientRect();
+      return { w: Math.max(1, r.width), h: Math.max(1, r.height) };
+    }
+
+    function resize(){
+      var sz = stageSize();
+      renderer.setSize(sz.w, sz.h, false);
+      camera.aspect = sz.w / sz.h;
+      camera.updateProjectionMatrix();
+      frameCamera();
+    }
+
+    // ---------------- lighting: three-point + rim ----------------
+    var hemi = new THREE.HemisphereLight(COLORS.steelSoft, COLORS.ink, 0.55);
+    scene.add(hemi);
+
+    var key = new THREE.DirectionalLight(COLORS.paper, 1.3);
+    key.position.set(2.4, 3.0, 3.2);
+    scene.add(key);
+
+    var fill = new THREE.DirectionalLight(COLORS.blue, 0.4);
+    fill.position.set(-3.0, -0.6, 1.6);
+    scene.add(fill);
+
+    var rim = new THREE.DirectionalLight(COLORS.red, 2.1);
+    rim.position.set(-1.2, 1.6, -3.0);
+    scene.add(rim);
+
+    var ember = new THREE.PointLight(COLORS.amber, 0.8, 6, 2);
+    ember.position.set(0, -1.5, 1.4);
+    scene.add(ember);
+
+    // ---------------- canvas-baked textures ----------------
+    function brushedMetalTexture(){
+      var c = document.createElement('canvas');
+      c.width = c.height = 512;
+      var ctx = c.getContext('2d');
+      ctx.fillStyle = '#808080';
+      ctx.fillRect(0, 0, 512, 512);
+      for (var i = 0; i < 2200; i++){
+        var y = Math.random() * 512;
+        var shade = 120 + Math.floor(Math.random() * 70);
+        ctx.strokeStyle = 'rgba(' + shade + ',' + shade + ',' + shade + ',0.06)';
+        ctx.lineWidth = Math.random() * 1.2;
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(512, y + (Math.random() * 6 - 3));
+        ctx.stroke();
+      }
+      var tex = new THREE.CanvasTexture(c);
+      tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+      tex.repeat.set(2, 2);
+      return tex;
+    }
+
+    function glowSpriteTexture(){
+      var c = document.createElement('canvas');
+      c.width = c.height = 64;
+      var ctx = c.getContext('2d');
+      var g = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+      g.addColorStop(0, 'rgba(255,255,255,1)');
+      g.addColorStop(0.35, 'rgba(255,255,255,0.7)');
+      g.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, 64, 64);
+      return new THREE.CanvasTexture(c);
+    }
+
+    // ---------------- forged monogram: real geometry, not a decal ----------------
+    // A raised oval band plus three embossed block letters (F, C, C) —
+    // built the same way as the rivets (extruded shapes in forged metal)
+    // instead of a printed texture. There's no way to load an actual
+    // Anton glyph outline here without an external font file the CSP
+    // won't allow, so the letters are hand-built bold block forms in the
+    // same blunt, condensed spirit as the flat mark's type.
+    function ellipsePts(rx, ry, segments, reverse){
+      var pts = [];
+      for (var i = 0; i <= segments; i++){
+        var t = reverse ? (1 - i / segments) : (i / segments);
+        var a = t * Math.PI * 2;
+        pts.push([Math.cos(a) * rx, Math.sin(a) * ry]);
+      }
+      return pts;
+    }
+
+    function ringShape(rxOut, ryOut, rxIn, ryIn){
+      var s = new THREE.Shape();
+      ellipsePts(rxOut, ryOut, 64, false).forEach(function(pt, i){ // CCW outer
+        i === 0 ? s.moveTo(pt[0], pt[1]) : s.lineTo(pt[0], pt[1]);
+      });
+      var hole = new THREE.Path();
+      ellipsePts(rxIn, ryIn, 64, true).forEach(function(pt, i){ // CW hole
+        i === 0 ? hole.moveTo(pt[0], pt[1]) : hole.lineTo(pt[0], pt[1]);
+      });
+      s.holes.push(hole);
+      return s;
+    }
+
+    // Bold block "F": stem + full-width top arm + shorter middle arm,
+    // baseline at y0, cap-height at y1 — one simple orthogonal outline.
+    function blockFShape(){
+      var W = 0.62, H = 1.0, t = 0.26, midY = 0.40, midT = 0.26, midLen = 0.52, topT = 0.26;
+      var s = new THREE.Shape();
+      s.moveTo(0, 0);
+      s.lineTo(t, 0);
+      s.lineTo(t, midY);
+      s.lineTo(midLen, midY);
+      s.lineTo(midLen, midY + midT);
+      s.lineTo(t, midY + midT);
+      s.lineTo(t, H - topT);
+      s.lineTo(W, H - topT);
+      s.lineTo(W, H);
+      s.lineTo(0, H);
+      s.lineTo(0, 0);
+      return s;
+    }
+
+    // Bold block "C": a thick ring segment with a gap on the right,
+    // same baseline/cap-height convention as the F above.
+    function blockCShape(){
+      var rxOut = 0.34, ryOut = 0.5, wall = 0.26; // same stroke weight as the F's stem
+      var rxIn = rxOut - wall, ryIn = ryOut - wall;
+      var gap = 32 * Math.PI / 180;
+      var startA = gap, endA = Math.PI * 2 - gap, segments = 28;
+      var s = new THREE.Shape();
+      for (var i = 0; i <= segments; i++){
+        var a = startA + (endA - startA) * (i / segments);
+        var x = rxOut + Math.cos(a) * rxOut, y = ryOut + Math.sin(a) * ryOut;
+        i === 0 ? s.moveTo(x, y) : s.lineTo(x, y);
+      }
+      s.lineTo(rxOut + Math.cos(endA) * rxIn, ryOut + Math.sin(endA) * ryIn);
+      for (var j = segments; j >= 0; j--){
+        var a2 = startA + (endA - startA) * (j / segments);
+        s.lineTo(rxOut + Math.cos(a2) * rxIn, ryOut + Math.sin(a2) * ryIn);
+      }
+      s.closePath();
+      return s;
+    }
+
+
+    // ---------------- crest group ----------------
+    var group = new THREE.Group();
+
+    // Trace SHIELD_PATH exactly: flat chamfered top, straight sides, then
+    // the two quadratic curves that sweep down to the shield's point.
+    var p0 = toLocal(60, 20),   p1 = toLocal(260, 20);
+    var p2 = toLocal(300, 60),  p3 = toLocal(300, 220);
+    var c1 = toLocal(300, 304), p4 = toLocal(160, 362); // bottom point
+    var c2 = toLocal(20, 304),  p5 = toLocal(20, 220);
+    var p6 = toLocal(20, 60);
+
+    var shape = new THREE.Shape();
+    shape.moveTo(p0[0], p0[1]);
+    shape.lineTo(p1[0], p1[1]);
+    shape.lineTo(p2[0], p2[1]);
+    shape.lineTo(p3[0], p3[1]);
+    shape.quadraticCurveTo(c1[0], c1[1], p4[0], p4[1]);
+    shape.quadraticCurveTo(c2[0], c2[1], p5[0], p5[1]);
+    shape.lineTo(p6[0], p6[1]);
+    shape.lineTo(p0[0], p0[1]);
+
+    var extrudeGeo = new THREE.ExtrudeGeometry(shape, {
+      depth: 0.3,
+      bevelEnabled: true,
+      bevelThickness: 0.05,
+      bevelSize: 0.05,
+      bevelSegments: 3,
+      curveSegments: 24
+    });
+    extrudeGeo.center();
+    extrudeGeo.computeBoundingBox();
+    var frontZ = extrudeGeo.boundingBox.max.z;
+
+    var plateMat = new THREE.MeshPhysicalMaterial({
+      color: COLORS.plate,
+      metalness: 0.88,
+      roughness: 0.42,
+      clearcoat: 0.25,
+      clearcoatRoughness: 0.35,
+      bumpMap: brushedMetalTexture(),
+      bumpScale: 0.012
+    });
+    var plate = new THREE.Mesh(extrudeGeo, plateMat);
+    group.add(plate);
+
+    // One shared forged-metal material for every piece of hardware —
+    // rivets, ring, and letters — so they all read as the same cast gold
+    // fittings. rivetMeshes collects all of them: everything in it pops
+    // into place together during the assembly reveal below.
+    var hardwareMat = new THREE.MeshStandardMaterial({ color: COLORS.gold, metalness: 0.92, roughness: 0.3 });
+    var rivetMeshes = [];
+
+    // The monogram/ring sits where the identity system's own ellipse
+    // (cx160,cy176) falls on the shield, not the shield's bounding-box
+    // center — a touch above center, same as the flat mark. Bigger and
+    // noticeably thicker than the flat mark's stroke, per his note.
+    var monoCenter = toLocal(160, 176);
+    var emblemExtrude = { depth: 0.07, bevelEnabled: true, bevelThickness: 0.014, bevelSize: 0.014, bevelSegments: 2, curveSegments: 1 };
+    var RING_RX = 0.90, RING_RY = RING_RX * (48 / 82), RING_WALL = 0.10;
+    var ringGeo = new THREE.ExtrudeGeometry(
+      ringShape(RING_RX, RING_RY, RING_RX - RING_WALL, RING_RY - RING_WALL),
+      emblemExtrude
+    );
+    var ringMesh = new THREE.Mesh(ringGeo, hardwareMat);
+    ringMesh.position.set(monoCenter[0], monoCenter[1], frontZ);
+    ringMesh.userData.baseScale = ringMesh.scale.clone();
+    group.add(ringMesh);
+    rivetMeshes.push(ringMesh);
+
+    // FCC as three raised block letters, centered as a row inside the ring.
+    var LETTER_SCALE = 0.46; // clear of the ring on all sides, not just roughly centered inside it
+    var LETTER_GAP = 0.09 * LETTER_SCALE;
+    var fW = 0.62 * LETTER_SCALE, cW = 0.68 * LETTER_SCALE;
+    var rowW = fW + LETTER_GAP + cW + LETTER_GAP + cW;
+    var letterX = monoCenter[0] - rowW / 2;
+    var letterY = monoCenter[1] - LETTER_SCALE / 2;
+    var fGeo = new THREE.ExtrudeGeometry(blockFShape(), emblemExtrude);
+    var cGeo = new THREE.ExtrudeGeometry(blockCShape(), emblemExtrude);
+
+    [
+      [fGeo, letterX],
+      [cGeo, letterX + fW + LETTER_GAP],
+      [cGeo, letterX + fW + LETTER_GAP + cW + LETTER_GAP]
+    ].forEach(function(entry){
+      var m = new THREE.Mesh(entry[0], hardwareMat);
+      m.scale.set(LETTER_SCALE, LETTER_SCALE, 1); // keep emboss depth constant, only stretch the footprint
+      m.position.set(entry[1], letterY, frontZ);
+      m.userData.baseScale = m.scale.clone();
+      group.add(m);
+      rivetMeshes.push(m);
+    });
+
+    // A rounded dome head, not a flat-faced drum — a hemisphere seated
+    // flush against the plate, flat side in, so it reads as an actual
+    // forged rivet rather than a bolt-head cylinder. Sized down a touch
+    // from the first pass.
+    var RIVET_R = 0.042;
+    var rivetGeo = new THREE.SphereGeometry(RIVET_R, 16, 10, 0, Math.PI * 2, 0, Math.PI / 2);
+    RIVET_SVG_POINTS.forEach(function(sp){
+      var pt = toLocal(sp[0], sp[1]);
+      var m = new THREE.Mesh(rivetGeo, hardwareMat);
+      m.position.set(pt[0], pt[1], frontZ - RIVET_R * 0.3);
+      m.rotation.x = Math.PI / 2;
+      m.userData.baseScale = m.scale.clone();
+      group.add(m);
+      rivetMeshes.push(m);
+    });
+
+    scene.add(group);
+
+    // ---------------- ember / spark particles ----------------
+    var COUNT = 220;
+    var positions = new Float32Array(COUNT * 3);
+    var colors = new Float32Array(COUNT * 3);
+    var speeds = new Float32Array(COUNT);
+    var sway = new Float32Array(COUNT);
+    var colRed = new THREE.Color(COLORS.red);
+    var colAmber = new THREE.Color(COLORS.amber);
+
+    function resetParticle(i, spawnLow){
+      var ix = i * 3;
+      positions[ix]     = (Math.random() - 0.5) * 2.4;
+      positions[ix + 1] = spawnLow ? (-1.7 + Math.random() * -0.5) : (-1.7 + Math.random() * 3.4);
+      positions[ix + 2] = (Math.random() - 0.5) * 0.7;
+      speeds[i] = 0.18 + Math.random() * 0.32;
+      sway[i] = Math.random() * Math.PI * 2;
+      var t = Math.random();
+      var c = colRed.clone().lerp(colAmber, t);
+      colors[ix] = c.r; colors[ix + 1] = c.g; colors[ix + 2] = c.b;
+    }
+    for (var p = 0; p < COUNT; p++) resetParticle(p, false);
+
+    var particleGeo = new THREE.BufferGeometry();
+    particleGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    particleGeo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+    var particleMat = new THREE.PointsMaterial({
+      size: 0.045,
+      map: glowSpriteTexture(),
+      transparent: true,
+      opacity: 0,
+      vertexColors: true,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      sizeAttenuation: true
+    });
+    var particles = new THREE.Points(particleGeo, particleMat);
+    scene.add(particles);
+
+    // ---------------- camera framing ----------------
+    function frameCamera(){
+      var box = new THREE.Box3().setFromObject(plate);
+      var size = new THREE.Vector3();
+      box.getSize(size);
+      var margin = 1.9;
+      var vfov = camera.fov * Math.PI / 180;
+      var distV = (size.y / 2) / Math.tan(vfov / 2);
+      var hfov = 2 * Math.atan(Math.tan(vfov / 2) * camera.aspect);
+      var distH = (size.x / 2) / Math.tan(hfov / 2);
+      var dist = Math.max(distV, distH) * margin;
+      camera.position.set(0, 0, dist);
+      camera.lookAt(0, 0, 0);
+    }
+
+    // ---------------- interaction: drag + auto-rotate + keyboard ----------------
+    var rotY = -0.55, rotX = 0.12;
+    var targetTiltX = 0.08;
+    var dragging = false, lastX = 0, lastY = 0;
+    var idleSince = performance.now();
+    var IDLE_DELAY = 1100;
+    var AUTO_SPEED = 0.11;
+    var hintFaded = false;
+
+    function fadeHint(){
+      if (hintFaded) return;
+      hintFaded = true;
+      hint.classList.add('hidden');
+    }
+
+    function onPointerDown(e){
+      dragging = true;
+      stage.classList.add('dragging');
+      lastX = e.clientX; lastY = e.clientY;
+      if (stage.setPointerCapture) { try { stage.setPointerCapture(e.pointerId); } catch (err) {} }
+      fadeHint();
+    }
+    function onPointerMove(e){
+      if (!dragging) return;
+      var dx = e.clientX - lastX;
+      var dy = e.clientY - lastY;
+      lastX = e.clientX; lastY = e.clientY;
+      rotY += dx * 0.008;
+      rotX = Math.max(-0.5, Math.min(0.5, rotX + dy * 0.006));
+      targetTiltX = rotX;
+    }
+    function onPointerUp(){
+      if (!dragging) return;
+      dragging = false;
+      stage.classList.remove('dragging');
+      idleSince = performance.now();
+    }
+    stage.addEventListener('pointerdown', onPointerDown);
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+    window.addEventListener('pointercancel', onPointerUp);
+
+    stage.addEventListener('keydown', function(e){
+      var step = 0.12;
+      if (e.key === 'ArrowLeft'){ rotY -= step; fadeHint(); idleSince = performance.now(); }
+      else if (e.key === 'ArrowRight'){ rotY += step; fadeHint(); idleSince = performance.now(); }
+      else if (e.key === 'ArrowUp'){ targetTiltX = Math.max(-0.5, targetTiltX - step * 0.6); fadeHint(); idleSince = performance.now(); }
+      else if (e.key === 'ArrowDown'){ targetTiltX = Math.min(0.5, targetTiltX + step * 0.6); fadeHint(); idleSince = performance.now(); }
+      else { return; }
+      e.preventDefault();
+    });
+
+    // ---------------- scroll-triggered assembly reveal ----------------
+    var revealed = false;
+    var revealStart = 0;
+    var REVEAL_MS = reduceMotion ? 1 : 1150;
+
+    rivetMeshes.forEach(function(m){
+      m.scale.copy(m.userData.baseScale).multiplyScalar(reduceMotion ? 1 : 0.001);
+    });
+    group.scale.setScalar(reduceMotion ? 1 : 0.8);
+    var startRotY = rotY - (reduceMotion ? 0 : 0.9);
+    var restRotY = rotY;
+    rotY = startRotY;
+
+    function easeOutBack(t){
+      var c1 = 1.6, c3 = c1 + 1;
+      return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
+    }
+    function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+
+    function runReveal(now){
+      if (revealStart === 0) revealStart = now;
+      var t = Math.min(1, (now - revealStart) / REVEAL_MS);
+      var eScale = easeOutBack(t);
+      var eLinear = easeOutCubic(t);
+
+      group.scale.setScalar(0.8 + 0.2 * eScale);
+      rotY = startRotY + (restRotY - startRotY) * easeOutCubic(t);
+
+      rivetMeshes.forEach(function(m, idx){
+        var d = Math.min(1, Math.max(0, (t * 1.5) - idx * 0.06));
+        m.scale.copy(m.userData.baseScale).multiplyScalar(easeOutBack(d));
+      });
+
+      particleMat.opacity = 0.9 * eLinear;
+
+      canvas.style.opacity = String(eLinear);
+      staticCrest.style.opacity = String(1 - eLinear);
+
+      if (t < 1){
+        requestAnimationFrame(runReveal);
+      } else {
+        canvas.classList.add('ready');
+      }
+    }
+
+    function triggerReveal(){
+      if (revealed) return;
+      revealed = true;
+      if (reduceMotion){
+        rotY = restRotY;
+        group.scale.setScalar(1);
+        rivetMeshes.forEach(function(m){ m.scale.copy(m.userData.baseScale); });
+        particleMat.opacity = 0.9;
+        canvas.style.opacity = '1';
+        staticCrest.style.opacity = '0';
+        canvas.classList.add('ready');
+        return;
+      }
+      requestAnimationFrame(runReveal);
+    }
+
+    if ('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting){
+            triggerReveal();
+            io.disconnect();
+          }
+        });
+      }, { threshold: 0.25 });
+      io.observe(stage);
+    } else {
+      triggerReveal();
+    }
+
+    // ---------------- render loop ----------------
+    var last = performance.now();
+    var running = true;
+
+    function tick(now){
+      if (!running) return;
+      var dt = Math.min(0.05, (now - last) / 1000);
+      last = now;
+
+      if (!dragging){
+        var idleFor = now - idleSince;
+        if (idleFor > IDLE_DELAY){
+          rotY += AUTO_SPEED * dt;
+        }
+      }
+      rotX += (targetTiltX - rotX) * Math.min(1, dt * 4);
+
+      group.rotation.y = rotY;
+      group.rotation.x = rotX;
+
+      var ix, ixp;
+      for (var i = 0; i < COUNT; i++){
+        ix = i * 3;
+        positions[ix + 1] += speeds[i] * dt;
+        positions[ix] += Math.sin(now * 0.001 + sway[i]) * 0.0025;
+        if (positions[ix + 1] > 1.9){
+          resetParticle(i, true);
+        }
+      }
+      particleGeo.attributes.position.needsUpdate = true;
+
+      ember.intensity = 0.7 + Math.sin(now * 0.006) * 0.25;
+
+      renderer.render(scene, camera);
+      requestAnimationFrame(tick);
+    }
+
+    document.addEventListener('visibilitychange', function(){
+      running = !document.hidden;
+      if (running){
+        last = performance.now();
+        requestAnimationFrame(tick);
+      }
+    });
+
+    window.addEventListener('resize', resize);
+    resize();
+    requestAnimationFrame(tick);
+  }
+
+  window.addEventListener('load', initHero);
+
+  // ---------------- "about" strip reveal (independent of the 3D scene) ----------------
+  var revealEls = document.querySelectorAll('.reveal-up');
+  if ('IntersectionObserver' in window && revealEls.length){
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('in');
+          io2.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el){ io2.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

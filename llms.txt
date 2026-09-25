@@ -1,0 +1,13 @@
+# Forge City Circuit
+
+Forge City Circuit is a fictional portfolio case study by Michael L. Lawson combining brand identity, product design, interaction design, and front-end development.
+
+## Primary content
+
+- `/` presents the visual project home and concise showcase.
+- `/case-study/` presents the complete project case study.
+- `/showcase/` redirects legacy links to the project home.
+- `/portal/` presents a working fictional fan portal with standings, schedules, brackets, rosters, and team pages.
+- `/crest/` presents an interactive three-dimensional study of the league crest.
+
+The league, franchises, venues, schedules, results, and rosters are fictional. They exist to demonstrate the design system and product experience.
