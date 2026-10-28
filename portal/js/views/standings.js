@@ -15,7 +15,7 @@ export function renderStandings(sportId) {
     return `
       <tr style="--team-accent:${sport.accent}">
         <td class="team-cell" data-label="Team">
-          <span style="color:var(--steel); width:18px; display:inline-block;">${i + 1}</span>
+          <span style="color:var(--steel-soft); width:18px; display:inline-block;">${i + 1}</span>
           ${teamBadgeSvg(team.abbr, sport.accent, 30)}
           <a href="#/${sport.id}/team/${team.id}">${seed ? `<span class="seed-tag" title="Playoff seed ${seed}">${seed}</span>` : ''}${team.name}</a>
         </td>

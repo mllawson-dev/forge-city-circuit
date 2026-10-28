@@ -20,6 +20,11 @@ export async function loadData() {
     readJson('js/data/rosters.json'),
     readJson('js/data/season.json'),
   ]);
+  setData({ teams, sports, rosters, season });
+}
+
+// Installs a league snapshot directly. loadData() uses it in the browser; tests use it in Node.
+export function setData({ teams, sports, rosters, season }) {
   TEAMS = teams; SPORTS = sports; ROSTERS = rosters; SEASON = season;
 }
 

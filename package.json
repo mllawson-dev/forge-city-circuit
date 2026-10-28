@@ -1,0 +1,19 @@
+{
+  "name": "forge-city-circuit",
+  "private": true,
+  "type": "module",
+  "description": "Forge City Circuit — brand identity, 3D crest and fan portal. Static site; package.json exists only for tests.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "serve": "node tests/serve.js",
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "test:e2e": "playwright test",
+    "test:all": "npm test && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.63.0"
+  }
+}

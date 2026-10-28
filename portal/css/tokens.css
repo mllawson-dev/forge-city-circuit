@@ -23,6 +23,9 @@
   --forge-amber: oklch(0.62 0.16 55);
   --circuit-blue: oklch(0.5 0.06 240);
   --rivet-gold: oklch(0.78 0.14 85);
+  /* text-safe tint of forge amber for small text on panels (WCAG AA 4.5:1) */
+  --forge-amber-text: oklch(0.68 0.16 55);
+  --league-red-text: oklch(0.66 0.19 25);
 
   /* fonts */
   --font-display: 'Anton', sans-serif;
@@ -66,7 +69,7 @@ h1, h2, h3, .display {
   font-weight: 600;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--steel);
+  color: var(--steel-soft);
 }
 
 .container {

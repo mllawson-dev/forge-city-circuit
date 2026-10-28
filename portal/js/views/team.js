@@ -49,7 +49,7 @@ export function renderTeam(sportId, teamId) {
       <td class="num" data-label="Number">#${p.number}</td>
       <td data-label="Player">${p.name}</td>
       <td data-label="Position">${p.position}</td>
-      <td data-label="Season" style="color:var(--steel)">${p.year}</td>
+      <td data-label="Season" style="color:var(--steel-soft)">${p.year}</td>
     </tr>`).join('');
 
   return `

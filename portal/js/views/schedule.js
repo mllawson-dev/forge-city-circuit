@@ -8,7 +8,7 @@ function gameRow(g) {
   const awayWon = played && g.awayScore > g.homeScore;
   const seedTag = (id) => {
     const s = g.seedHome && id === g.homeTeamId ? g.seedHome : (g.seedAway && id === g.awayTeamId ? g.seedAway : null);
-    return s ? `<span style="color:var(--steel); font-size:11px;">#${s}</span> ` : '';
+    return s ? `<span style="color:var(--steel-soft); font-size:11px;">#${s}</span> ` : '';
   };
   return `
     <div class="game-row">

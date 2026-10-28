@@ -24,7 +24,7 @@
 .brand .icon { width: 38px; height: auto; flex: none; }
 .brand-text { display: flex; flex-direction: column; line-height: 1; }
 .brand-text .name { font-family: var(--font-display); font-size: 20px; letter-spacing: 1.5px; }
-.brand-text .tagline { font-size: 13px; letter-spacing: 2.5px; color: var(--steel); text-transform: uppercase; margin-top: 4px; }
+.brand-text .tagline { font-size: 13px; letter-spacing: 2.5px; color: var(--steel-soft); text-transform: uppercase; margin-top: 4px; }
 .project-home {
   display: inline-flex;
   align-items: center;
@@ -80,7 +80,7 @@
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--steel);
+  color: var(--steel-soft);
   white-space: nowrap;
   border-bottom: 3px solid transparent;
 }
@@ -97,7 +97,7 @@ main { flex: 1; }
   border-bottom: 1px solid var(--hairline);
 }
 .page-hero h1 { font-size: clamp(28px, 4vw, 44px); }
-.page-hero .sub { color: var(--steel); font-size: 18px; margin-top: 8px; }
+.page-hero .sub { color: var(--steel-soft); font-size: 18px; margin-top: 8px; }
 .snapshot-note { display: inline-flex; margin: 18px 0 0; padding: 6px 9px; border: 1px solid var(--hairline-strong); color: var(--steel-soft); font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; }
 
 .section {
@@ -120,7 +120,7 @@ main { flex: 1; }
 .site-footer a.fine { min-height: 44px; display: inline-flex; align-items: center; }
 .project-links { display: flex; align-items: center; gap: 16px; }
 .site-footer .fine {
-  color: var(--steel);
+  color: var(--steel-soft);
   font-size: 14px;
   letter-spacing: 1px;
 }

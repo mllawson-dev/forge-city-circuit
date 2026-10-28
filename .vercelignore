@@ -1,0 +1,9 @@
+# Test tooling stays in the repo but is not deployed with the static site.
+tests/
+.github/
+node_modules/
+package.json
+package-lock.json
+playwright.config.js
+test-results/
+playwright-report/
