@@ -31,7 +31,7 @@ function tickerItem(g, opts) {
     <div class="ticker-item" style="--sport-accent:${sport.accent}">
       ${iconSvg(sportIconHref(g.sportId), 20)}
       <div class="matchup">
-        <div class="teams">${away.abbr} @ ${home.abbr} <span style="color:var(--steel)">· ${sport.name}${g.round !== 'regular' ? ' · ' + g.round : ''}</span></div>
+        <div class="teams">${away.abbr} @ ${home.abbr} <span style="color:var(--steel-soft)">· ${sport.name}${g.round !== 'regular' ? ' · ' + g.round : ''}</span></div>
         <div class="meta">${formatDate(g.date)}</div>
       </div>
       <div class="score">${scoreOrTime}</div>

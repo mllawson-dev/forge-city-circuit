@@ -8,7 +8,8 @@ export function route(pattern, render) {
   routes.push({ segments, render });
 }
 
-function match(pathSegments) {
+// Exported for unit tests: returns { render, params } for the first matching route, or null.
+export function match(pathSegments) {
   for (const r of routes) {
     if (r.segments.length !== pathSegments.length) continue;
     const params = {};
@@ -23,6 +24,9 @@ function match(pathSegments) {
   }
   return null;
 }
+
+// Exported for unit tests: clears registered routes.
+export function resetRoutes() { routes.length = 0; }
 
 let onNotFound = () => {};
 export function notFound(fn) { onNotFound = fn; }
